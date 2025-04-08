@@ -13,6 +13,12 @@
         android:theme="@style/Theme.OlioHT"
         tools:targetApi="31">
         <activity
+            android:name=".LutemonTehtavat"
+            android:exported="false" />
+        <activity
+            android:name=".LutemonToiminnot"
+            android:exported="false" />
+        <activity
             android:name=".UusiLutemon"
             android:exported="false" />
         <activity

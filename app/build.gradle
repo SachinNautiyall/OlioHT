@@ -36,5 +36,6 @@ dependencies {
     implementation libs.constraintlayout
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
+    implementation libs.recyclerview
     androidTestImplementation libs.espresso.core
 }
