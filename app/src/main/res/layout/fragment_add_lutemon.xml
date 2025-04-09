@@ -28,43 +28,43 @@
         app:layout_constraintTop_toBottomOf="@+id/AddLutemonPreview">
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/radioButtonPink"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton"
+            android:text="Pink"
             android:textSize="10sp" />
 
         <RadioButton
-            android:id="@+id/radioButton7"
+            android:id="@+id/radioButtonGreen"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton"
+            android:text="Green"
             android:textSize="10sp" />
 
         <RadioButton
-            android:id="@+id/radioButton8"
+            android:id="@+id/radioButtonBlack"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton"
+            android:text="Black"
             android:textSize="10sp" />
 
         <RadioButton
-            android:id="@+id/radioButton9"
+            android:id="@+id/radioButtonWhite"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton"
+            android:text="White"
             android:textSize="10sp" />
 
         <RadioButton
-            android:id="@+id/radioButton10"
+            android:id="@+id/radioButtonOrange"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton"
+            android:text="Orange"
             android:textSize="10sp" />
     </RadioGroup>
 
@@ -88,6 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/LutemonNameInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Lutemon name" />
