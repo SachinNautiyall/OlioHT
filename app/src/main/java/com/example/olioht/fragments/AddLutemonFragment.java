@@ -34,11 +34,20 @@ public class AddLutemonFragment extends Fragment {
 
         int currentID = ColorRadioGroup.getCheckedRadioButtonId();
 
-        if (currentID == R.id.radioButtonPink) {
-            if (LutemonName.getText() != null) {
-
+        if (LutemonName.getText().toString() != null || LutemonName.getText().toString() != "") {
+            if (currentID == R.id.radioButtonPink) {
+                Storage.getInstance().addLutemon(new Pink((LutemonName.getText().toString())));
+            } else if (currentID == R.id.radioButtonBlack) {
+                Storage.getInstance().addLutemon(new Black((LutemonName.getText().toString())));
+            } else if (currentID == R.id.radioButtonGreen) {
+                Storage.getInstance().addLutemon(new Pink((LutemonName.getText().toString())));
+            } else if (currentID == R.id.radioButtonWhite) {
+                Storage.getInstance().addLutemon(new Pink((LutemonName.getText().toString())));
+            } else if (currentID == R.id.radioButtonOrange) {
                 Storage.getInstance().addLutemon(new Pink((LutemonName.getText().toString())));
             }
+        } else {
+            // TODO add warning no lutemon name given
         }
 
         /*
