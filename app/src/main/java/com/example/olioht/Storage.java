@@ -29,7 +29,15 @@ public class Storage {
         LutemonHashMap.put(id, lutemon);
     }
 
+    public void removeLutemons(Lutemon lutemon){
+        LutemonHashMap.remove(id, this)
+    }
+
     public HashMap<Integer, Lutemon> GetLutemonHashMap() {
         return LutemonHashMap;
+    }
+
+    public void (Lutemon lutemon) {
+        LutemonHashMap.clear();
     }
 }

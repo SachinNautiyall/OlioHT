@@ -8,24 +8,14 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/AddLutemonPreview"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/ColorRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddLutemonPreview">
+        app:layout_constraintTop_toBottomOf="@+id/AddLutemonImage">
 
         <RadioButton
             android:id="@+id/radioButtonPink"
@@ -69,7 +59,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/AddLutemonButton"
+        android:id="@+id/AddNewLutemonButton"
         android:layout_width="197dp"
         android:layout_height="87dp"
         android:layout_marginTop="20dp"
@@ -85,7 +75,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
+        app:layout_constraintTop_toBottomOf="@+id/ColorRadioGroup">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/LutemonNameInput"
@@ -93,5 +83,14 @@
             android:layout_height="wrap_content"
             android:hint="Lutemon name" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/AddLutemonImage"
+        android:layout_width="497dp"
+        android:layout_height="233dp"
+        android:src="@drawable/pl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
