@@ -25,7 +25,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/LutemonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lutemon name"
@@ -37,19 +36,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/HealthImage"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_weight="1"
-                    tools:srcCompat="@android:drawable/alert_dark_frame" />
-
                 <TextView
-                    android:id="@+id/LutemonHealth"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Health"
+                    android:text="❤️Health:"
                     android:textColor="#E00000" />
+
+                <TextView
+                    android:id="@+id/health"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -59,19 +58,20 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/ExperienceImage"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@android:drawable/alert_dark_frame" />
-
                 <TextView
-                    android:id="@+id/LutemonExperience"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Experience"
+                    android:text="⚜️ Experience:"
                     android:textColor="#958700" />
+
+                <TextView
+                    android:id="@+id/experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -79,34 +79,36 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/AttackImage"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@android:drawable/alert_dark_frame" />
-
                 <TextView
-                    android:id="@+id/LutemonAttack"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Attack" />
+                    android:text="⚔️Attack:" />
 
-                <ImageView
-                    android:id="@+id/DefenceImage"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                <TextView
+                    android:id="@+id/attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@android:drawable/alert_dark_frame" />
+                    android:text="🛡Defence:" />
 
                 <TextView
-                    android:id="@+id/LutemonDefence"
+                    android:id="@+id/defence"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="1"
-                    android:text="Defence" />
+                    android:text="0"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

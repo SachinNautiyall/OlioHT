@@ -10,10 +10,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.olioht.fragments.HomeFragment;
 import com.example.olioht.fragments.MoveLutemonFragment;
 import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,46 +30,39 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        TabItem HomeFragment = findViewById(R.id.HomeButton);
-        TabItem MoveFragment = findViewById(R.id.MoveButton);
-        TabItem TrainFragment = findViewById(R.id.TrainButton);
-        TabItem BattleFragment = findViewById(R.id.BattleButton);
-        TabItem AddFragment = findViewById(R.id.AddButton);
-        TabItem StorageFragment = findViewById(R.id.StorageButton);
-        HomeFragment.setOnClickListener(listener);
-        MoveFragment.setOnClickListener(listener);
-        TrainFragment.setOnClickListener(listener);
-        BattleFragment.setOnClickListener(listener);
-        AddFragment.setOnClickListener(listener);
-        StorageFragment.setOnClickListener(listener);
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        ViewPager2 fragmentArea = findViewById(R.id.MainFragmentView);
+        TabPagerAdapter tabPagerAdapter = new TabPagerAdapter(this);
+        fragmentArea.setAdapter(tabPagerAdapter);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                fragmentArea.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        fragmentArea.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                tabLayout.getTabAt(position).select();
+            }
+        });
 
 
     }
-    private View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Fragment fragment = null;
 
-            int id = view.getId();
-            if (id == R.id.HomeButton){
-                fragment = new HomeFragment();
-            } else if (id== R.id.StorageButton){
-                fragment = new MoveLutemonFragment();
-            } else if (id== R.id.BattleButton) {
-                    fragment = new MoveLutemonFragment();
-            } else if (id== R.id.TrainButton) {
-                fragment = new MoveLutemonFragment();
-            } else if (id== R.id.AddButton){
-                fragment = new MoveLutemonFragment();
-            }
-            if (fragment !=null){
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.MainFragmentView, fragment)
-                        .commit();
-
-            }
-        }
-    };
 }
 
 
