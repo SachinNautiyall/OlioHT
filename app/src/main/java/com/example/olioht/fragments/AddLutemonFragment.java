@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 
 import com.example.olioht.R;
 import com.example.olioht.Storage;
-import com.example.olioht.LutemonColors.Pink;
+import com.example.olioht.LutemonColors.*;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class AddLutemonFragment extends Fragment {
@@ -40,27 +40,16 @@ public class AddLutemonFragment extends Fragment {
             } else if (currentID == R.id.radioButtonBlack) {
                 Storage.getInstance().addLutemon(new Black((LutemonName.getText().toString())));
             } else if (currentID == R.id.radioButtonGreen) {
-                Storage.getInstance().addLutemon(new Pink((LutemonName.getText().toString())));
+                Storage.getInstance().addLutemon(new Green((LutemonName.getText().toString())));
             } else if (currentID == R.id.radioButtonWhite) {
-                Storage.getInstance().addLutemon(new Pink((LutemonName.getText().toString())));
+                Storage.getInstance().addLutemon(new White((LutemonName.getText().toString())));
             } else if (currentID == R.id.radioButtonOrange) {
-                Storage.getInstance().addLutemon(new Pink((LutemonName.getText().toString())));
+                Storage.getInstance().addLutemon(new Orange((LutemonName.getText().toString())));
             }
         } else {
             // TODO add warning no lutemon name given
         }
 
-        /*
-        switch (ColorRadioGroup.getCheckedRadioButtonId()) {
-            case R.id.radioButtonPink:
-                if (LutemonName.getText() != null) {
-                    
-                    Storage.getInstance().addLutemon(new Pink((LutemonName.getText().toString())));
-                }
-                break;
-
-        }
-        */
         // Inflate the layout for this fragment
         return view;
     }
